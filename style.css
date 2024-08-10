@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html {
+    font-size: 18px; /* Cambia de 16px a 18px, así 1rem = 18px */
+}
+body{
+    background: #F3F5FC;
+    height: 100vh;
+    box-sizing: border-box;
+}
+* {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem; /* 32px = 2rem */
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.logo {
+    padding-top: 1.5rem; /* 10px = 0.625rem */
+    margin-left: 0.625rem; /* 10px = 0.625rem */
+    width: 7%;
+}
+
+.encriptador_base{
+    display: flex;
+    align-items: center;
+    margin: 5% 10%;
+    justify-content: space-between;
+}
+
+.textarea__contenido{
+    width: 70%;
+}
+
+.textmensaje__contenido{
+    width: 30%;
+    position: relative; /* Contenedor padre para el posicionamiento relativo */
+    box-sizing: border-box;
+}
+
+
+.text-area {
+    border: none;
+    background: none;
+    color: #0A3871;
+    text-transform: lowercase;
+}
+
+::placeholder { color: #0A3871; }
+
+.text-area:focus {
+    outline: none;
+}
+
+.mensaje {
+    width: 100%; /* Asegura que el textarea se ajuste al contenedor */
+    background: white;
+    background-image: url(/imagenes/Muñeco.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    border-radius: 1.5rem; /* 24px = 1.5rem */
+    color: #0A3871;
+    margin-left: 5%;
+    height: auto;
+    padding: 1rem; /* Espaciado interno */
+    box-sizing: border-box;
+    position: relative;
+    
+
+    
+}
+
+.mensaje:focus {
+    outline: none;
+}
+
+.mensajes__contenedor{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80%; /* Centramos el contenedor verticalmente */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centramos el contenedor */
+    width: 80%; /* Ancho del contenedor del texto */
+    text-align: center;
+}
+
+.text-mensaje {
+    font-size: 1.5rem; /* 24px = 1.5rem */
+    font-weight: 700;
+    color: #343A40;
+    background: none;
+    
+
+}
+
+.text-mensaje2 {
+    font-family: Inter;
+    font-size: 1rem; /* 16px = 1rem */
+    font-weight: 400;
+    line-height: 1.5rem; /* 24px = 1.5rem */
+    color: #495057;
+    background: none;
+}
+
+.botones {
+    display: flex;
+    margin-top: 1rem; 
+}
+
+.btdesencriptar, .btencriptar {
+    border-radius: 1.5rem; /* 24px = 1.5rem */
+    height: 4.1875rem; /* 67px = 4.1875rem */
+    width: 20.5rem; /* 328px = 20.5rem */
+}
+
+.btdesencriptar {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    cursor: pointer;
+    margin-left: 1.875rem; /* 30px = 1.875rem */
+}
+
+.btencriptar {
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    color: white;
+    cursor: pointer;
+}
+
+.informacion-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el icono y el texto */
+}
+
+.exclamacion {
+    margin-right: 0.3rem; /* Espacio entre el icono y el texto */
+}
+
+
+.informacion {
+    color: #495057;
+    font-size: 1rem;
+}
+.copiar {
+    border-radius: 1.5rem; /* 24px = 1.5rem */
+    height: 4.1875rem; /* 67px = 4.1875rem */
+    width: 100%; /* Cambiamos a 100% para que ocupe todo el ancho del contenedor */
+    max-width: 20.5rem;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    cursor: pointer;
+    display: none; /* Se mostrará cuando sea necesario */
+    text-align: center; /* Aseguramos que el texto esté centrado */
+    box-sizing: border-box;
+    margin-left: 5%;
+}
+
+/* Modo para tablet */
+@media (max-width: 1250px){
+
+    /* Estilos para celulares */
+    html {
+        font-size: 16px; /* Reducción del tamaño base del texto */
+    }
+
+    .logo {
+        width: 20%;
+        margin-left: 0;
+    }
+
+    .encriptador_base{
+        flex-direction: column;
+    }
+
+    .textarea__contenido{
+        width: auto;
+    }
+    
+    .textmensaje__contenido{
+        width: auto;
+        margin-top: 5%;
+    }
+    .btencriptar, .btdesencriptar, .copiar {
+        width: 90%;
+        margin-left: 0;
+        height: 3.5rem; /* Ajustamos la altura de los botones */
+    }
+
+}
+
+/* Modo para celular */
+@media (max-width: 800px){
+    .botones{
+        flex-direction: column;
+    }
+
+    .textarea__contenido{
+        margin-left: 30%;
+    }
+    
+    .textmensaje__contenido{
+        margin-left: 10%;
+        margin-top: 3%;
+    }
+    .btencriptar, .btdesencriptar{
+        width: 70%;
+        margin-left: 0;
+        height: 3.5rem; /* Ajustamos la altura de los botones */
+    }
+
+    .btdesencriptar{
+        margin-top: 2%;
+    }
+
+
+
+}
